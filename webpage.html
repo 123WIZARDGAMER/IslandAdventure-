@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Island Adventure Services</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{background:#f5f7fa;color:#333}
+nav{background:#0a3d62;color:#fff;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+nav ul{list-style:none;display:flex;gap:20px}
+nav ul li{cursor:pointer}
+nav ul li:hover{color:#ffd32a}
+section{display:none;padding:60px 10%;animation:fade .4s ease}
+section.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1}}
+.hero{background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;color:#fff;text-align:center;padding:120px 10%}
+.hero h1{font-size:3rem}
+.title{text-align:center;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:#fff;padding:25px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.1)}
+.price{font-weight:bold;margin:10px 0}
+button{padding:10px 15px;border:none;border-radius:6px;background:#0a3d62;color:#fff;cursor:pointer;transition:.3s}
+button:hover{transform:scale(1.05);background:#1e90ff}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:12px;border-bottom:1px solid #ddd}
+th{background:#0a3d62;color:#fff}
+input{width:100%;padding:10px;margin:6px 0}
+footer{background:#0a3d62;color:#fff;text-align:center;padding:20px}
+h1, h2, h3 { letter-spacing: .3px; }
+
+.card {
+  transition: all .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.15);
+}
+
+button {
+  font-weight:600;
+}
+
+@media(max-width:768px){
+  h1 { font-size:2.4rem !important; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Island Adventure</h2>
+<ul>
+<li onclick="showSection('home')">Home</li>
+<li onclick="showSection('gallery')">Gallery</li>
+<li onclick="showSection('services')">Services</li>
+<li onclick="showSection('contact')">Contact</li>
+</ul>
+</nav>
+
+<section id="home" class="active">
+  <div style="
+    min-height:100vh;
+    background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+  ">
+
+    <div style="max-width:650px;color:#fff">
+
+      <span style="
+        background:#ffd32a;
+        color:#000;
+        padding:6px 14px;
+        border-radius:30px;
+        font-size:13px;
+        font-weight:600;
+      ">
+        #1 Adventure Experience in Andaman
+      </span>
+
+      <h1 style="
+        margin-top:20px;
+        font-size:3.4rem;
+        line-height:1.2;
+        font-weight:700;
+      ">
+        Explore Andaman <br>
+        Like Never Before
+      </h1>
+
+      <p style="
+        margin-top:20px;
+        font-size:1.15rem;
+        line-height:1.7;
+        opacity:.95;
+      ">
+        Premium scuba diving, kayaking, Elephant Beach activities and water sports
+        with certified instructors and complete safety.
+      </p>
+
+      <div style="
+        margin-top:35px;
+        display:flex;
+        gap:18px;
+        flex-wrap:wrap;
+      ">
+        <button onclick="showSection('services')" style="
+          padding:15px 34px;
+          font-size:1.05rem;
+          border-radius:30px;
+        ">
+          View Activities 
+        </button>
+
+        <a href="https://wa.me/918900982750" target="_blank">
+          <button style="
+            padding:15px 34px;
+            font-size:1.05rem;
+            border-radius:30px;
+            background:#25D366;
+          ">
+            WhatsApp Booking
+          </button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TRUST / USP BAR -->
+  <div style="
+    background:#fff;
+    padding:50px 8%;
+  ">
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    ">
+    </div>
+  </div>
+  <!-- HOME PAGE DETAILS -->
+<div style="background:#f5f7fa;padding:70px 8%">
+
+  <!-- WHY CHOOSE US -->
+  <div class="title">
+    <h2>Why Choose Island Adventure?</h2>
+    <p>Trusted water sports & adventure partner in Andaman</p>
+  </div>
+
+  <div class="grid" style="margin-bottom:60px">
+    <div class="card">
+      <h3>🌊 Safe & Certified</h3>
+      <p>
+        All water activities are conducted by trained professionals
+        using certified safety equipment. Your safety is our top priority.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🏝️ Best Locations</h3>
+      <p>
+        We operate at the most beautiful and safe beaches including
+        Elephant Beach, known for clear water and coral reefs.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>💬 Easy Booking</h3>
+      <p>
+        Simple WhatsApp booking, transparent pricing, and quick support
+        from our local team anytime.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>⭐ Top Rated</h3>
+      <p>
+        Rated 4.9★ by travelers for quality service, friendly guides,
+        and unforgettable experiences.
+      </p>
+    </div>
+  </div>
+
+  <!-- POPULAR WATER ACTIVITIES -->
+  <div class="title">
+    <h2>Popular Water Activities</h2>
+    <p>Experience the best of Andaman’s water adventures</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- Scuba -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1586508577428-120d6b072945?q=80&w=1228&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+      <h3>Scuba Diving</h3>
+      <p>
+        Dive into the underwater world and explore colorful coral reefs
+        and marine life with expert instructors.
+      </p>
+      <p class="price">Starting from ₹3500 - ₹5500</p>
+      <button onclick="showSection('scuba')">Explore Scuba</button>
+    </div>
+
+    <!-- Kayaking -->
+    <div class="card">
+      <img src="https://img.freepik.com/free-photo/couple-together-kayaking-river_1303-16023.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+      <h3>Kayaking</h3>
+      <p>
+        Paddle through calm waters, mangroves, and stunning landscapes
+        during day, sunset, or night.
+      </p>
+      <p class="price">Starting from ₹1500 - ₹3500</p>
+      <button onclick="showSection('kayaking')">Explore Kayaking</button>
+    </div>
+
+    <!-- Elephant Beach -->
+    <div class="card">
+      <img src="https://goatoursplanner.com/wp-content/uploads/2025/08/Watersport-in-Goa.jpeg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+      <h3>Elephant Beach Activities</h3>
+      <p>
+        Enjoy snorkeling, parasailing, jet ski, sea walk and more at
+        Andaman’s most famous activity beach.
+      </p>
+      <p class="price">Multiple activities available</p>
+      <button onclick="showSection('elephant-beach')">Explore Activities</button>
+    </div>
+
+    <!-- Parasailing -->
+    <div class="card">
+      <img src="https://www.andamanislands.com/uploads/andamanislands/gallery/main/2983f9b9d64355a058c3cc179a1d3d2a_178.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+      <h3>Parasailing</h3>
+      <p>
+        Fly above the sea and enjoy breathtaking aerial views while being
+        safely harnessed by trained crew.
+      </p>
+      <p class="price">₹3000</p>
+      <button onclick="showSection('elephant-beach')">View Details</button>
+    </div>
+
+  </div>
+
+</div>
+</section>
+<section id="gallery">
+  <div class="title">
+    <h2>Adventure Gallery</h2>
+    <p>Our popular activities & prices</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- Scuba Diving -->
+    <div class="card">
+      <img src="https://static2.tripoto.com/media/filter/tst/img/295383/TripDocument/1549820172_1549820170650.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px">
+      <h3>Scuba Diving</h3>
+      <p>Boat Dive / Shore Dive</p>
+      <p class="price">Starting from ₹3500</p>
+    </div>
+
+    <!-- Kayaking -->
+    <div class="card">
+      <img src="https://www.havelockislandbeachresort.com/storage/water-sports-listing-page-hibr/night-kayaking.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px">
+      <h3>Kayaking</h3>
+      <p>Day • Sunset • Night</p>
+      <p class="price">Starting from ₹1500 - ₹3500</p>
+    </div>
+
+    <!-- Parasailing -->
+    <div class="card">
+      <img src="https://www.andamanislands.com/uploads/andamanislands/gallery/main/2983f9b9d64355a058c3cc179a1d3d2a_178.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px">
+      <h3>Parasailing</h3>
+      <p>Experience flying over the sea</p>
+      <p class="price">₹3800</p>
+    </div>
+
+    <!-- Jet Ski -->
+    <div class="card">
+      <img src="https://res.cloudinary.com/manawa/image/private/f_auto,c_limit,w_3840,q_auto/cfitu4v6t8wwh3xja46h"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px">
+      <h3>Jet Ski Ride</h3>
+      <p>High-speed water adventure</p>
+      <p class="price">₹800</p>
+    </div>
+
+    <!-- Banana Ride -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPBoq8cVrFOae0CTsbbKRGHN1gpWcBgI3pUR68CdIY9tmevyFJHhMlyQXD&s=10"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px">
+      <h3>Banana Ride</h3>
+      <p>Fun group water ride</p>
+      <p class="price">₹600</p>
+    </div>
+
+    <!-- Sea Walk -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTY56lAH3A27ObNH7g80O7y3ZsIGzpXoS9UQcCKo0My6fVVdSYGHaKRww&s=10"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px">
+      <h3>Sea Walk</h3>
+      <p>Walk under the sea</p>
+      <p class="price">₹3500</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="services">
+  <div class="title">
+    <h2>Our Services</h2>
+    <p>Premium adventure & travel experiences</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- Cab Service -->
+    <div class="card">
+      <img src="https://www.sscarrentalnagpur.com/wp-content/uploads/2024/07/Cab-services-1.jpg"
+           alt="Cab Service"
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+      <h3>Cab Service</h3>
+      <p>Comfortable, safe & reliable island transfers</p>
+    </div>
+
+    <!-- Scuba Diving -->
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/498283106/photo/underwater-scuba-diver-explore-and-enjoy-coral-reef-sea-life.jpg?s=612x612&w=0&k=20&c=xOj00xaZTpy5-AtKvMvIHHfexz9miSSct_CXb6F9KVA="
+           alt="Scuba Diving"
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+      <h3>Scuba Diving</h3>
+      <p>Explore coral reefs & marine life</p>
+      <button onclick="showSection('scuba')">View Details</button>
+    </div>
+
+    <!-- Kayaking -->
+    <div class="card">
+      <img src="https://res.cloudinary.com/gofjords-com/images/c_scale,w_848,h_565,dpr_1.5/f_auto,q_auto:eco/v1683890721/Experiences/XXLofoten/Kayaking/Evening%20kayaking%202020/Evening-kayaking-Svolvaer-Lofoten-XXlofoten-1/Evening-kayaking-Svolvaer-Lofoten-XXlofoten-1.jpg?_i=AA"
+           alt="Kayaking"
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+      <h3>Kayaking</h3>
+      <p>Day, sunset & night kayaking experiences</p>
+      <button onclick="showSection('kayaking')">View Details</button>
+    </div>
+
+    <!-- Elephant Beach -->
+    <div class="card">
+      <img src="https://www.andamanocean.in/wp-content/uploads/2025/05/Water-Sports-in-Andaman.jpg"
+           alt="Elephant Beach Activities"
+           style="width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+      <h3>Elephant Beach Activities</h3>
+      <p>Jet ski, parasailing & water adventures</p>
+      <button onclick="showSection('elephant-beach')">View All Activities</button>
+    </div>
+<!-- Elephant Beach Boat Ticket -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21"
+       style="width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+  <h3>Elephant Beach Boat Ticket</h3>
+
+  <p>
+    Speed boat transfer to Elephant Beach from Havelock.
+    Includes return boat, life jacket, and crew assistance.
+  </p>
+
+  <ul style="margin:10px 0 15px 20px">
+    <li>Speed boat (up & down)</li>
+    <li>Life jacket included</li>
+    <li>Government-approved boats</li>
+  </ul>
+
+  <p class="price">Starting from ₹1200 / person</p>
+
+  <button onclick="bookElephantBoat()">
+    Book Boat Ticket
+  </button>
+</div>
+
+  </div>
+</section>
+<section id="scuba">
+  <div class="title">
+    <h2>Scuba Diving Programs</h2>
+    <p>Choose the dive that suits you best</p>
+  </div>
+
+  <!-- Explanation -->
+  <div class="card" style="margin-bottom:40px;background:#f9fbff">
+    <h3>Boat Dive vs Shore Dive – What’s the Difference?</h3>
+    <p style="margin-top:10px;line-height:1.7">
+      If you are new to scuba diving, choosing between a <strong>Boat Dive</strong>
+      and a <strong>Shore Dive</strong> can be confusing. Here’s a simple explanation
+      to help you decide 👇
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <!-- Boat Dive -->
+    <div class="card">
+      <img src="https://res.cloudinary.com/padi/image/upload/f_auto,q_75,w_auto,dpr_auto/v1749805264/CDN/commerce/60491-1B2C.webp"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🚤 Boat Dive</h3>
+      <p style="line-height:1.6">
+        In a <strong>Boat Dive</strong>, you travel by boat to deeper diving locations
+        with rich coral reefs and colorful marine life. This dive offers better visibility
+        and a more adventurous experience.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px;line-height:1.6">
+        <li>Deeper dive locations</li>
+        <li>More corals & fish variety</li>
+        <li>Best visibility</li>
+        <li>Ideal for adventure seekers</li>
+      </ul>
+
+      <p class="price">₹<span id="p_boat"></span> / person</p>
+      <button onclick="bookNow('Scuba Boat Dive',prices.boat)">Book Boat Dive</button>
+    </div>
+
+    <!-- Shore Dive -->
+    <div class="card">
+      <img src="https://www.adventurush.com/wp-content/uploads/2023/06/Dive-into-Adventure-1-1024x427.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🏖️ Shore Dive</h3>
+      <p style="line-height:1.6">
+        In a <strong>Shore Dive</strong>, you enter the water directly from the beach.
+        It is done in shallow water and is perfect for first-time divers who want a
+        relaxed and comfortable experience.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px;line-height:1.6">
+        <li>Shallow & calm waters</li>
+        <li>Perfect for beginners</li>
+        <li>No boat travel</li>
+        <li>Easy & comfortable dive</li>
+      </ul>
+
+      <p class="price">₹<span id="p_shore"></span> / person</p>
+      <button onclick="bookNow('Scuba Shore Dive',prices.shore)">Book Shore Dive</button>
+    </div>
+
+  </div>
+
+  <!-- Recommendation -->
+  <div class="card" style="margin-top:40px;background:#eef6ff">
+    <h3>💡 Our Recommendation</h3>
+    <p style="line-height:1.7">
+      👉 <strong>First-time diver?</strong> Choose <strong>Shore Dive</strong><br>
+      👉 <strong>Want more adventure & marine life?</strong> Choose <strong>Boat Dive</strong><br><br>
+      Not sure? <strong>WhatsApp us</strong> and we’ll guide you personally 😊
+    </p>
+  </div>
+</section>
+<section id="kayaking">
+  <div class="title">
+    <h2>Kayaking Programs</h2>
+    <p>Choose the kayaking experience that suits you</p>
+  </div>
+
+  <!-- Explanation -->
+  <div class="card" style="margin-bottom:40px;background:#f9fbff">
+    <h3>Day, Sunset & Night Kayaking – What’s the Difference?</h3>
+    <p style="margin-top:10px;line-height:1.7">
+      Kayaking is a calm and beautiful way to explore the waters of Andaman.
+      Each time of day offers a different experience. Here’s a simple guide
+      to help you choose the best one for you 👇
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <!-- Day Kayaking -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>☀️ Day Kayaking</h3>
+      <p style="line-height:1.6">
+        <strong>Day Kayaking</strong> is done in bright daylight, allowing you
+        to enjoy clear views of the water, mangroves, and surroundings.
+        It is relaxing and easy for everyone.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px;line-height:1.6">
+        <li>Clear visibility</li>
+        <li>Calm & safe experience</li>
+        <li>Best for families & beginners</li>
+        <li>Great for photos</li>
+      </ul>
+
+      <p class="price">₹<span id="p_day"></span> / person</p>
+      <button onclick="bookNow('Day Kayaking',prices.day)">Book Day Kayaking</button>
+    </div>
+
+    <!-- Sunset Kayaking -->
+    <div class="card">
+      <img src="https://northern-explorer.com/wp-content/uploads/2024/03/Sunset-kayaking-5-northern.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🌅 Sunset Kayaking</h3>
+      <p style="line-height:1.6">
+        <strong>Sunset Kayaking</strong> lets you paddle during golden hour,
+        when the sky changes colors. It’s peaceful, romantic, and one of the
+        most popular experiences.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px;line-height:1.6">
+        <li>Beautiful sunset views</li>
+        <li>Romantic & peaceful</li>
+        <li>Perfect for couples</li>
+        <li>Best time for scenic photos</li>
+      </ul>
+
+      <p class="price">₹<span id="p_sunset"></span> / person</p>
+      <button onclick="bookNow('Sunset Kayaking',prices.sunset)">Book Sunset Kayaking</button>
+    </div>
+
+    <!-- Night Kayaking -->
+    <div class="card">
+      <img src="https://www.havelockislandbeachresort.com/storage/water-sports-listing-page-hibr/night-kayaking.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🌌 Night Kayaking</h3>
+      <p style="line-height:1.6">
+        <strong>Night Kayaking</strong> is a unique adventure done after dark.
+        With glowing lights under your kayak, you experience the water in a
+        magical and exciting way.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px;line-height:1.6">
+        <li>Unique night experience</li>
+        <li>LED-lit kayaks</li>
+        <li>Adventure & thrill</li>
+        <li>Guided & safe</li>
+      </ul>
+
+      <p class="price">₹<span id="p_night"></span> / person</p>
+      <button onclick="bookNow('Night Kayaking',prices.night)">Book Night Kayaking</button>
+    </div>
+
+  </div>
+
+  <!-- Recommendation -->
+  <div class="card" style="margin-top:40px;background:#eef6ff">
+    <h3>💡 Our Recommendation</h3>
+    <p style="line-height:1.7">
+      👉 <strong>First time kayaking?</strong> Choose <strong>Day Kayaking</strong><br>
+      👉 <strong>Couples & photography?</strong> Choose <strong>Sunset Kayaking</strong><br>
+      👉 <strong>Adventure lovers?</strong> Choose <strong>Night Kayaking</strong><br><br>
+      Still confused? <strong>WhatsApp us</strong> and we’ll help you choose 😊
+    </p>
+  </div>
+</section>
+<section id="elephant-beach">
+  <div class="title">
+    <h2>Elephant Beach Water Activities</h2>
+    <p>Enjoy the most popular water sports at Elephant Beach, Andaman</p>
+  </div>
+
+  <!-- Intro -->
+  <div class="card" style="background:#f9fbff;margin-bottom:40px">
+    <h3>Why Elephant Beach?</h3>
+    <p style="line-height:1.7">
+      Elephant Beach is famous for its crystal-clear water, shallow reef,
+      and safe environment for water activities. It is perfect for beginners,
+      families, and adventure lovers.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <!-- Snorkeling -->
+    <div class="card">
+      <img src="https://andyoucreations.com/wp-content/uploads/2017/10/DAY-water-71-1536x1024.jpg"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🤿 Snorkeling</h3>
+      <p>
+        Snorkeling allows you to float on the surface and see colorful fishes
+        and corals. No swimming skills required.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px">
+        <li>Life jacket provided</li>
+        <li>Guide assistance</li>
+        <li>Best for beginners</li>
+      </ul>
+
+      <p class="price">₹<span id="p_snorkeling"></span> / person</p>
+      <button onclick="bookNow('Elephant Beach Snorkeling',prices.snorkeling)">
+        Book Now
+      </button>
+    </div>
+
+    <!-- Parasailing -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSdKnOZXFbsSuqyiA3qhS_WUEtIF12FRiH08tGvZtwodB1k239a6qQ34Hl&s=10"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🪂 Parasailing</h3>
+      <p>
+        Fly high above the sea while being safely attached to a parachute.
+        Enjoy breathtaking aerial views of the island.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px">
+        <li>No experience needed</li>
+        <li>Safety harness & crew</li>
+        <li>Panoramic sea view</li>
+      </ul>
+
+      <p class="price">₹<span id="p_parasailing"></span> / person</p>
+      <button onclick="bookNow('Parasailing',prices.parasailing)">
+        Book Now
+      </button>
+    </div>
+
+    <!-- Sea Walk -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTTY56lAH3A27ObNH7g80O7y3ZsIGzpXoS9UQcCKo0My6fVVdSYGHaKRww&s=10"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🚶‍♂️ Sea Walk</h3>
+      <p>
+        Walk on the sea bed with a special helmet and breathe normally while
+        watching marine life closely.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px">
+        <li>No swimming required</li>
+        <li>Safe oxygen helmet</li>
+        <li>Close coral experience</li>
+      </ul>
+
+      <p class="price">₹<span id="p_seawalk"></span> / person</p>
+      <button onclick="bookNow('Sea Walk',prices.seawalk)">
+        Book Now
+      </button>
+    </div>
+
+    <!-- Jet Ski -->
+    <div class="card">
+      <img src="https://res.cloudinary.com/manawa/image/private/f_auto,c_limit,w_3840,q_auto/rvgtersnl85ejk7ekh0t"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🚤 Jet Ski Ride</h3>
+      <p>
+        A high-speed water ride for thrill seekers. Ride the waves with full
+        safety support.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px">
+        <li>Instructor guidance</li>
+        <li>Life jacket provided</li>
+        <li>Short & exciting ride</li>
+      </ul>
+
+      <p class="price">₹<span id="p_jetski"></span> / person</p>
+      <button onclick="bookNow('Jet Ski Ride',prices.jetski)">
+        Book Now
+      </button>
+    </div>
+    <!-- Sofa Ride -->
+<div class="card">
+  <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/15/54/ed/ed.jpg"
+       style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+  <h3>🛟 Sofa Ride</h3>
+  <p>
+    A fun and bumpy inflatable ride pulled by a speed boat.
+    Perfect for friends and families looking for laughter and excitement.
+  </p>
+
+  <ul style="margin:10px 0 15px 20px">
+    <li>Group activity (2–4 persons)</li>
+    <li>Life jacket provided</li>
+    <li>Safe & supervised ride</li>
+  </ul>
+
+  <p class="price">₹<span id="p_sofa"></span> / person</p>
+  <button onclick="bookNow('Sofa Ride',prices.sofa)">Book Now</button>
+</div>
+
+<!-- Semi Submarine -->
+<div class="card">
+  <img src="https://cdn.experienceandamans.com/images/havelock-island-best-glass-bottom-boat-ride.jpg"
+       style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+  <h3>🚢 Semi Submarine</h3>
+  <p>
+    Enjoy underwater views without getting wet. Sit inside a semi-submerged
+    vessel and watch corals and marine life through large glass windows.
+  </p>
+
+  <ul style="margin:10px 0 15px 20px">
+    <li>No swimming required</li>
+    <li>Air-conditioned cabin</li>
+    <li>Safe for kids & seniors</li>
+  </ul>
+
+  <p class="price">₹<span id="p_semisub"></span> / person</p>
+  <button onclick="bookNow('Semi Submarine',prices.semisub)">Book Now</button>
+</div>
+
+<!-- Submersible Scooter -->
+<div class="card">
+  <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/09/4a/da/53.jpg"
+       style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+  <h3>🤿 Submersible Scooter</h3>
+  <p>
+    Ride an underwater scooter and move freely beneath the sea.
+    A unique experience that feels like flying underwater.
+  </p>
+
+  <ul style="margin:10px 0 15px 20px">
+    <li>Guided underwater ride</li>
+    <li>No swimming skills required</li>
+    <li>Helmet & oxygen supply</li>
+  </ul>
+
+  <p class="price">₹<span id="p_scooter"></span> / person</p>
+  <button onclick="bookNow('Submersible Scooter',prices.scooter)">Book Now</button>
+</div>
+
+    <!-- Banana Ride -->
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPBoq8cVrFOae0CTsbbKRGHN1gpWcBgI3pUR68CdIY9tmevyFJHhMlyQXD&s=10"
+           style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px">
+
+      <h3>🍌 Banana Boat Ride</h3>
+      <p>
+        A fun group ride on an inflatable banana-shaped boat. Perfect for
+        friends and families.
+      </p>
+
+      <ul style="margin:10px 0 15px 20px">
+        <li>Group activity</li>
+        <li>Safe & fun</li>
+        <li>Lots of laughter guaranteed</li>
+      </ul>
+
+      <p class="price">₹<span id="p_banana"></span> / person</p>
+      <button onclick="bookNow('Banana Boat Ride',prices.banana)">
+        Book Now
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Recommendation -->
+  <div class="card" style="margin-top:40px;background:#eef6ff">
+    <h3>💡 Not Sure What to Choose?</h3>
+    <p style="line-height:1.7">
+      👉 <strong>First-time visitors:</strong> Snorkeling<br>
+      👉 <strong>Adventure lovers:</strong> Parasailing & Jet Ski<br>
+      👉 <strong>Non-swimmers:</strong> Sea Walk<br>
+      👉 <strong>Groups & families:</strong> Banana Ride<br><br>
+      📲 WhatsApp us on <strong>8900982750</strong> for guidance.
+    </p>
+  </div>
+</section>
+<section id="payment">
+  <div class="title">
+    <h2>Payment</h2>
+    <p>Complete your booking using UPI</p>
+  </div>
+
+  <div class="card" style="max-width:420px;margin:auto;text-align:center">
+
+    <h3 id="payService">Selected Service</h3>
+    <p id="payAmount" style="font-weight:bold;margin-bottom:15px">
+      Amount: ₹0
+    </p>
+
+    <h4 style="margin:15px 0">Scan & Pay via UPI</h4>
+
+    <img
+      src="/images/GooglePay_QR.png"
+      alt="UPI QR"
+      style="width:220px;max-width:90%;border:1px solid #ccc;border-radius:10px"
+    >
+
+    <p style="font-size:13px;color:#555;margin-top:8px">
+      Google Pay • PhonePe • Paytm
+    </p>
+
+    <button
+      onclick="payWithUPI()"
+      style="margin-top:15px;width:100%;padding:14px;
+             background:#16a085;color:#fff;border:none;
+             border-radius:6px;font-size:16px;font-weight:600">
+      Pay via UPI App
+    </button>
+
+    <p style="font-size:12px;color:#777;margin-top:10px">
+      After payment, you will be redirected to WhatsApp automatically.
+    </p>
+
+  </div>
+</section>
+<section id="payment-success">
+  <div class="title">
+    <h2>Payment Submitted ✅</h2>
+    <p>Thank you for your payment</p>
+  </div>
+
+  <div class="card" style="max-width:450px;margin:auto;text-align:center">
+
+    <h3 style="color:#16a085;margin-bottom:10px">
+      Payment Details Received
+    </h3>
+
+    <p style="line-height:1.6">
+      We have received your payment details.
+      Our team will verify the transaction and confirm your booking shortly.
+    </p>
+
+    <p style="margin-top:15px;font-weight:600">
+      📌 Service: <span id="successService"></span><br>
+      💰 Amount: ₹<span id="successAmount"></span>
+    </p>
+
+    <p style="font-size:13px;color:#777;margin-top:15px">
+      Please make sure you have shared the payment screenshot on WhatsApp.
+    </p>
+
+    <button
+      onclick="showSection('home')"
+      style="margin-top:20px;padding:12px 30px;border-radius:30px">
+      Back to Home
+    </button>
+
+  </div>
+</section>
+<section id="contact">
+<div class="title"><h2>Contact</h2></div>
+<div class="grid">
+<div class="card">📍 Andaman Islands</div>
+<div class="card">📞 8900982750</div>
+<div class="card">
+<a href="https://wa.me/918900982750" target="_blank"><button>WhatsApp</button></a>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Island Adventure Services</footer>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+/* ================= DATA ================= */
+let selectedService = "";
+let selectedAmount = 0;
+
+let prices = {
+  boat: 4500,
+  shore: 3500,
+  day: 1500,
+  sunset: 2500,
+  night: 3000,
+  snorkeling: 1200,
+  parasailing: 3000,
+  seawalk: 3500,
+  jetski: 800,
+  banana: 500,
+  sofa: 700,
+  semisub: 2500,
+  scooter: 4000
+};
+
+// Load saved prices safely
+if (localStorage.getItem("prices")) {
+  try {
+    prices = JSON.parse(localStorage.getItem("prices"));
+  } catch (e) {
+    console.warn("Invalid prices in localStorage, using default");
+  }
+}
+
+/* ================= PAGE NAVIGATION ================= */
+function showSection(id) {
+  document.querySelectorAll("section").forEach(sec => {
+    sec.classList.remove("active");
+  });
+
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add("active");
+    window.scrollTo(0, 0);
+  }
+}
+
+/* ================= PRICE RENDER ================= */
+function renderPrices() {
+  for (let key in prices) {
+    const el = document.getElementById("p_" + key);
+    if (el) el.innerText = prices[key];
+  }
+}
+renderPrices();
+
+/* ================= BOOKING ================= */
+function bookNow(service, amount) {
+  selectedService = service;
+  selectedAmount = amount;
+
+  const msg =
+    "Booking Request%0A" +
+    "Service: " + service + "%0A" +
+    "Amount: ₹" + amount;
+
+  window.open(
+    "https://wa.me/918900982750?text=" + msg,
+    "_blank"
+  );
+
+  document.getElementById("payService").innerText = service;
+  document.getElementById("payAmount").innerText = "Amount: ₹" + amount;
+
+  showSection("payment");
+}
+
+/* ================= PAYMENT ================= */
+function payNow() {
+  if (!selectedAmount) {
+    alert("Please select a service first");
+    return;
+  }
+
+  const options = {
+    key: "rzp_test_XXXXXXXXXX", // 🔴 replace with REAL Razorpay key
+    amount: selectedAmount * 100,
+    currency: "INR",
+    name: "Island Adventure",
+    description: selectedService,
+    handler: function (response) {
+      alert(
+        "Payment Successful!\nPayment ID: " +
+        response.razorpay_payment_id
+      );
+    },
+    theme: {
+      color: "#0a3d62"
+    }
+  };
+
+  const rzp = new Razorpay(options);
+  rzp.open();
+}
+
+/* ================= ELEPHANT BEACH BOAT ================= */
+function bookElephantBoat() {
+  const msg =
+    "Elephant Beach Boat Ticket Booking%0A" +
+    "Pickup: Havelock Jetty%0A" +
+    "Includes: Speed boat (up & down), life jacket";
+
+  window.open(
+    "https://wa.me/918900982750?text=" + msg,
+    "_blank"
+  );
+}
+</script>
+<script>
+/* ===== SMOOTH BACK BUTTON NAVIGATION (FIX ONLY) ===== */
+
+let sectionHistory = [];
+
+// override showSection to store history
+const originalShowSection = showSection;
+
+showSection = function(id){
+  const current = document.querySelector("section.active");
+  if(current && current.id !== id){
+    sectionHistory.push(current.id);
+    history.pushState({section:id},"",`#${id}`);
+  }
+  originalShowSection(id);
+};
+
+// handle browser back button
+window.onpopstate = function(){
+  if(sectionHistory.length > 0){
+    const prev = sectionHistory.pop();
+    originalShowSection(prev);
+  } else {
+    originalShowSection('home');
+  }
+};
+</script>
+<script>
+function payWithUPI(){
+
+  if (!selectedAmount || !selectedService) {
+    alert("Please select a service before making payment.");
+    return;
+  }
+
+  const upiId = "islandadventure@okaxis"; // 🔴 REPLACE WITH YOUR REAL UPI ID
+  const payeeName = "Island Adventure Services";
+
+  const amount = selectedAmount;
+  const note = selectedService;
+
+  const upiURL =
+    "upi://pay" +
+    "?pa=" + encodeURIComponent(upiId) +
+    "&pn=" + encodeURIComponent(payeeName) +
+    "&am=" + encodeURIComponent(amount) +
+    "&cu=INR" +
+    "&tn=" + encodeURIComponent(note);
+
+  // Save details for WhatsApp redirect
+  localStorage.setItem("upiProgram", note);
+  localStorage.setItem("upiAmount", amount);
+
+  // Open UPI App
+  window.location.href = upiURL;
+
+  // Redirect to WhatsApp after 6 seconds
+  setTimeout(redirectToWhatsAppAfterPay, 6000);
+}
+
+function redirectToWhatsAppAfterPay(){
+
+  const program = localStorage.getItem("upiProgram");
+  const amount = localStorage.getItem("upiAmount");
+
+  // Show success section
+  document.getElementById("successService").innerText = program;
+  document.getElementById("successAmount").innerText = amount;
+
+  showSection("payment-success");
+
+  const msg =
+`Hello,
+I have completed the payment.
+
+📌 Program: ${program}
+💰 Amount: ₹${amount}
+
+Please find the payment screenshot attached.`;
+
+  const whatsappURL =
+    "https://wa.me/918900982750?text=" + encodeURIComponent(msg);
+
+  // Open WhatsApp after showing success
+  setTimeout(() => {
+    window.open(whatsappURL, "_blank");
+  }, 1500);
+}
+</script>
+</body>
+</html>
